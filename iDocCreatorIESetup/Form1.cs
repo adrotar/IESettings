@@ -24,8 +24,9 @@ namespace iDocCreatorIESetup
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "iDocCreator Standards";
+            this.TrustedURL.LostFocus += new EventHandler(TrustedURL_LostFocus);
             this.TrustedURL.Enter += new EventHandler(TrustedURL_Focus); // enter event==get focus event 
-            //this.TrustedURL.Text = "Trusted Sites"; this.TrustedURL.TextAlign = HorizontalAlignment.Center;
+            this.TrustedURL.Text = "Trusted Sites"; //this.TrustedURL.TextAlign = HorizontalAlignment.Center;
             this.TrustedURL.Cursor = Cursors.Arrow;
         }
 
@@ -51,7 +52,12 @@ namespace iDocCreatorIESetup
         {
             TrustedURL.Text = "";
         }
-        private void TrustedURL_LostFocus(object sender, EventArgs e){
+        protected void TrustedURL_LostFocus(object sender, EventArgs e){
+            if(this.TrustedURL.Focused){
+                if(this.TrustedURL.Text == ""){
+                    this.TrustedURL.Text = "Nothing Changed";
+                }
+            }
             
         }
     }
