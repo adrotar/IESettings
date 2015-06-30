@@ -19,6 +19,7 @@ namespace iDocCreatorIESetup
         public Form1()
         {
             InitializeComponent();
+            Shown += Form1_Shown;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,15 +30,22 @@ namespace iDocCreatorIESetup
             this.TrustedURL.Cursor = Cursors.Arrow;
         }
 
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            loadRegistry();
+        }
+
         private void recurseRegKey(RegistryKey registryKey) {
-            if (registryKey.SubKeyCount != null && registryKey.SubKeyCount > 0)
+            string msg = "";
+            if (registryKey.SubKeyCount > 0)
             {
-                foreach (var VARIABLE in registryKey.GetSubKeyNames())
+                foreach (var key in registryKey.GetSubKeyNames())
                 {
-                    Console.WriteLine(VARIABLE);//here I can see I have many keys
-                    //no need to switch to x64 as suggested on other posts
+                    msg += key + " ";
+                    lstTrustedSites.Items.Add((string) key);
                 }
             }
+            MessageBox.Show(msg);
         }
         private void loadRegistry() {
             const string regPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains";
