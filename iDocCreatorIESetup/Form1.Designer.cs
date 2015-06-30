@@ -64,6 +64,7 @@
             this.AddToTrusted.TabIndex = 4;
             this.AddToTrusted.Text = "Add To Trusted Sites";
             this.AddToTrusted.UseVisualStyleBackColor = true;
+            this.AddToTrusted.Click += new System.EventHandler(this.AddToTrusted_Click);
             // 
             // lstTrustedSites
             // 

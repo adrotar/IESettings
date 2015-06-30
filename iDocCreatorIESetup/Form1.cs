@@ -17,6 +17,7 @@ namespace iDocCreatorIESetup
         private ArrayList keys = new ArrayList();
         bool dirty = false;
         string defaultMessage = "Enter A Trusted Site";
+
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +49,7 @@ namespace iDocCreatorIESetup
                 }
             }
         }
+
         private void loadRegistry()
         {
             const string regPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains";
@@ -69,6 +71,7 @@ namespace iDocCreatorIESetup
                 TrustedURL.ForeColor = Color.Gray;
             }
         }
+
         protected void TrustedURL_LostFocus(object sender, EventArgs e)
         {
             TrustedURL.ForeColor = Color.Gray;
@@ -82,10 +85,17 @@ namespace iDocCreatorIESetup
                 this.TrustedURL.Text = defaultMessage;
             }
         }
+
         protected void TrustedURL_key(object sender, EventArgs e)
         {
             TrustedURL.ForeColor = Color.Black;
             dirty = true;
+        }
+
+        private void AddToTrusted_Click(object sender, EventArgs e)
+        {
+            string myTrustedSite = TrustedURL.ToString();
+
         }
     }
 }
