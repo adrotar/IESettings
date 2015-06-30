@@ -16,7 +16,7 @@ namespace iDocCreatorIESetup
     {
         private ArrayList keys = new ArrayList();
         bool dirty = false;
-        string defaultMessage = "Enter Trusted Sites";
+        string defaultMessage = "Enter A Trusted Site";
         public Form1()
         {
             InitializeComponent();
@@ -29,9 +29,8 @@ namespace iDocCreatorIESetup
             this.TrustedURL.Leave += new EventHandler(TrustedURL_LostFocus);
             this.TrustedURL.Enter += new EventHandler(TrustedURL_Focus); // enter event==get focus event 
             this.TrustedURL.KeyPress += new KeyPressEventHandler(TrustedURL_key);
-            this.TrustedURL.Text = defaultMessage; //this.TrustedURL.TextAlign = HorizontalAlignment.Center;
-            this.TrustedURL.Cursor = Cursors.Arrow;
-            this.textBox1.Focus();
+            this.TrustedURL.Text = defaultMessage;
+            this.TrustedURL.Cursor = Cursors.Arrow; TrustedURL.ForeColor = Color.Gray;
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -67,12 +66,15 @@ namespace iDocCreatorIESetup
             if (!dirty)
             {
                 TrustedURL.Text = "";
+                TrustedURL.ForeColor = Color.Gray;
             }
         }
         protected void TrustedURL_LostFocus(object sender, EventArgs e)
         {
+            TrustedURL.ForeColor = Color.Gray;
             if (TrustedURL.Text == "")
             {
+                TrustedURL.ForeColor = Color.Gray;
                 dirty = false;
             }
             if (!dirty)
@@ -82,6 +84,7 @@ namespace iDocCreatorIESetup
         }
         protected void TrustedURL_key(object sender, EventArgs e)
         {
+            TrustedURL.ForeColor = Color.Black;
             dirty = true;
         }
     }

@@ -30,73 +30,59 @@
         {
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.TrustedURL = new System.Windows.Forms.RichTextBox();
-            this.TrustedSite = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddToTrusted = new System.Windows.Forms.Button();
             this.lstTrustedSites = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TrustedURL
             // 
-            this.TrustedURL.Location = new System.Drawing.Point(118, 115);
+            this.TrustedURL.Font = new System.Drawing.Font("Calibri", 12F);
+            this.TrustedURL.Location = new System.Drawing.Point(28, 88);
             this.TrustedURL.Name = "TrustedURL";
             this.TrustedURL.Size = new System.Drawing.Size(168, 25);
             this.TrustedURL.TabIndex = 1;
             this.TrustedURL.Text = "";
             // 
-            // TrustedSite
-            // 
-            this.TrustedSite.AutoSize = true;
-            this.TrustedSite.Location = new System.Drawing.Point(25, 118);
-            this.TrustedSite.Name = "TrustedSite";
-            this.TrustedSite.Size = new System.Drawing.Size(64, 13);
-            this.TrustedSite.TabIndex = 1;
-            this.TrustedSite.Text = "Trusted Site";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(394, 35);
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(226, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 3;
+            this.label1.Size = new System.Drawing.Size(144, 19);
+            this.label1.TabIndex = 2;
             this.label1.Text = "Current Trusted Sites";
             // 
-            // button1
+            // AddToTrusted
             // 
-            this.button1.Location = new System.Drawing.Point(164, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.AddToTrusted.AutoSize = true;
+            this.AddToTrusted.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddToTrusted.Location = new System.Drawing.Point(37, 119);
+            this.AddToTrusted.Name = "AddToTrusted";
+            this.AddToTrusted.Size = new System.Drawing.Size(150, 29);
+            this.AddToTrusted.TabIndex = 4;
+            this.AddToTrusted.Text = "Add To Trusted Sites";
+            this.AddToTrusted.UseVisualStyleBackColor = true;
             // 
             // lstTrustedSites
             // 
+            this.lstTrustedSites.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstTrustedSites.FormattingEnabled = true;
-            this.lstTrustedSites.Location = new System.Drawing.Point(397, 75);
+            this.lstTrustedSites.ItemHeight = 19;
+            this.lstTrustedSites.Location = new System.Drawing.Point(242, 70);
             this.lstTrustedSites.Name = "lstTrustedSites";
-            this.lstTrustedSites.Size = new System.Drawing.Size(120, 95);
-            this.lstTrustedSites.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(249, 253);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.lstTrustedSites.Size = new System.Drawing.Size(128, 156);
+            this.lstTrustedSites.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 471);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lstTrustedSites);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddToTrusted);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TrustedSite);
             this.Controls.Add(this.TrustedURL);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -110,11 +96,9 @@
 
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.RichTextBox TrustedURL;
-        private System.Windows.Forms.Label TrustedSite;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddToTrusted;
         private System.Windows.Forms.ListBox lstTrustedSites;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
