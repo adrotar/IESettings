@@ -24,6 +24,9 @@ namespace iDocCreatorIESetup
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "iDocCreator Standards";
+            this.TrustedURL.Enter += new EventHandler(TrustedURL_Focus); // enter event==get focus event 
+            //this.TrustedURL.Text = "Trusted Sites"; this.TrustedURL.TextAlign = HorizontalAlignment.Center;
+            this.TrustedURL.Cursor = Cursors.Arrow;
         }
 
         private void recurseRegKey(RegistryKey registryKey) {
@@ -36,14 +39,12 @@ namespace iDocCreatorIESetup
                 }
             }
         }
-
-        private void loadRegistry()
+        protected void TrustedURL_Focus(object sender, EventArgs e)
         {
-            const string regPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains";
-            using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(regPath))
-            {
-                recurseRegKey(registryKey);
-            }
+            TrustedURL.Text = "";
+        }
+        private void TrustedURL_LostFocus(object sender, EventArgs e){
+            
         }
     }
 }

@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TrustedURL = new System.Windows.Forms.RichTextBox();
             this.TrustedSite = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // TrustedURL
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(118, 115);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(168, 25);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.TrustedURL.Location = new System.Drawing.Point(118, 115);
+            this.TrustedURL.Name = "TrustedURL";
+            this.TrustedURL.Size = new System.Drawing.Size(168, 25);
+            this.TrustedURL.TabIndex = 0;
+            this.TrustedURL.Text = "";
             // 
             // TrustedSite
             // 
@@ -88,7 +88,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.TrustedSite);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.TrustedURL);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -100,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox TrustedURL;
         private System.Windows.Forms.Label TrustedSite;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label label1;
