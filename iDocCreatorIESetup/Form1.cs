@@ -15,7 +15,8 @@ namespace iDocCreatorIESetup
     public partial class Form1 : Form
     {
         private ArrayList keys = new ArrayList();
-
+        bool dirty = false;
+        string defaultMessage = "Enter Trusted Sites";
         public Form1()
         {
             InitializeComponent();
@@ -25,10 +26,12 @@ namespace iDocCreatorIESetup
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Text = "iDocCreator Standards";
-            this.TrustedURL.LostFocus += new EventHandler(TrustedURL_LostFocus);
+            this.TrustedURL.Leave += new EventHandler(TrustedURL_LostFocus);
             this.TrustedURL.Enter += new EventHandler(TrustedURL_Focus); // enter event==get focus event 
-            this.TrustedURL.Text = "Trusted Sites"; //this.TrustedURL.TextAlign = HorizontalAlignment.Center;
+            this.TrustedURL.KeyPress += new KeyPressEventHandler(TrustedURL_key);
+            this.TrustedURL.Text = defaultMessage; //this.TrustedURL.TextAlign = HorizontalAlignment.Center;
             this.TrustedURL.Cursor = Cursors.Arrow;
+            this.textBox1.Focus();
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -36,19 +39,18 @@ namespace iDocCreatorIESetup
             loadRegistry();
         }
 
-        private void recurseRegKey(RegistryKey registryKey) {
-            string msg = "";
+        private void recurseRegKey(RegistryKey registryKey)
+        {
             if (registryKey.SubKeyCount > 0)
             {
                 foreach (var key in registryKey.GetSubKeyNames())
                 {
-                    msg += key + " ";
-                    lstTrustedSites.Items.Add((string) key);
+                    lstTrustedSites.Items.Add((string)key);
                 }
             }
-            MessageBox.Show(msg);
         }
-        private void loadRegistry() {
+        private void loadRegistry()
+        {
             const string regPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains";
             using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(regPath))
             {
@@ -58,15 +60,29 @@ namespace iDocCreatorIESetup
 
         protected void TrustedURL_Focus(object sender, EventArgs e)
         {
-            TrustedURL.Text = "";
-        }
-        protected void TrustedURL_LostFocus(object sender, EventArgs e){
-            if(this.TrustedURL.Focused){
-                if(this.TrustedURL.Text == ""){
-                    this.TrustedURL.Text = "Nothing Changed";
-                }
+            if (TrustedURL.Text == "")
+            {
+                dirty = false;
             }
-            
+            if (!dirty)
+            {
+                TrustedURL.Text = "";
+            }
+        }
+        protected void TrustedURL_LostFocus(object sender, EventArgs e)
+        {
+            if (TrustedURL.Text == "")
+            {
+                dirty = false;
+            }
+            if (!dirty)
+            {
+                this.TrustedURL.Text = defaultMessage;
+            }
+        }
+        protected void TrustedURL_key(object sender, EventArgs e)
+        {
+            dirty = true;
         }
     }
 }
