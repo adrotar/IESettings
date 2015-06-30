@@ -13,3 +13,6 @@ C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\New folder\iDocCreatorIE
 C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\IESettings\iDocCreatorIESetup\bin\Debug\iDocCreatorIESetup.exe.config
 C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\IESettings\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.exe
 C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\IESettings\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.pdb
+C:\Users\cbeyer\Desktop\IESettings\iDocCreatorIESetup\bin\Debug\iDocCreatorIESetup.exe.config
+C:\Users\cbeyer\Desktop\IESettings\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.exe
+C:\Users\cbeyer\Desktop\IESettings\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.pdb
