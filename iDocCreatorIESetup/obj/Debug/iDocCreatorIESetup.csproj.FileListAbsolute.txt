@@ -1,0 +1,15 @@
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\bin\Debug\iDocCreatorIESetup.exe.config
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\bin\Debug\iDocCreatorIESetup.exe
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\bin\Debug\iDocCreatorIESetup.pdb
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.csprojResolveAssemblyReference.cache
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.Form1.resources
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.Properties.Resources.resources
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.csproj.GenerateResource.Cache
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.exe
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\iDocCreator\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.pdb
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\New folder\iDocCreatorIESetup\iDocCreatorIESetup\bin\Debug\iDocCreatorIESetup.exe.config
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\New folder\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.exe
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\New folder\iDocCreatorIESetup\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.pdb
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\IESettings\iDocCreatorIESetup\bin\Debug\iDocCreatorIESetup.exe.config
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\IESettings\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.exe
+C:\Users\adrotar\Google Drive\ImageSoft Coding Projects\IESettings\iDocCreatorIESetup\obj\Debug\iDocCreatorIESetup.pdb
