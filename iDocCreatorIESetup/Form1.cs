@@ -39,6 +39,14 @@ namespace iDocCreatorIESetup
                 }
             }
         }
+        private void loadRegistry() {
+            const string regPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains";
+            using (RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(regPath))
+            {
+                recurseRegKey(registryKey);
+            }
+        }
+
         protected void TrustedURL_Focus(object sender, EventArgs e)
         {
             TrustedURL.Text = "";
